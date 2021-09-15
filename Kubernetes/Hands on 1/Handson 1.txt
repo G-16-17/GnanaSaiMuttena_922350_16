@@ -1,0 +1,53 @@
+Microsoft Windows [Version 10.0.19043.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Hp>Kubectl version
+Client Version: version.Info{Major:"1", Minor:"21", GitVersion:"v1.21.4", GitCommit:"3cce4a82b44f032d0cd1a1790e6d2f5a55d20aae", GitTreeState:"clean", BuildDate:"2021-08-11T18:16:05Z", GoVersion:"go1.16.7", Compiler:"gc", Platform:"windows/amd64"}
+Unable to connect to the server: dial tcp 127.0.0.1:53083: connectex: No connection could be made because the target machine actively refused it.
+
+C:\Users\Hp>Minikube version
+minikube version: v1.23.0
+commit: 5931455374810b1bbeb222a9713ae2c756daee10
+
+C:\Users\Hp>minikube start
+* minikube v1.23.0 on Microsoft Windows 10 Pro 10.0.19043 Build 19043
+* Using the docker driver based on existing profile
+* Starting control plane node minikube in cluster minikube
+* Pulling base image ...
+* Restarting existing docker container for "minikube" ...
+* Preparing Kubernetes v1.22.1 on Docker 20.10.8 ...
+* Verifying Kubernetes components...
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 3.3057548s
+* Restarting the docker service may improve performance.
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: default-storageclass, storage-provisioner
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+
+C:\Users\Hp>minikube status
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 6.1716953s
+* Restarting the docker service may improve performance.
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+
+
+C:\Users\Hp>minikube stop
+* Stopping node "minikube"  ...
+* Powering off "minikube" via SSH ...
+* 1 nodes stopped.
+
+C:\Users\Hp>minikube status
+! Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 2.7362887s
+* Restarting the docker service may improve performance.
+minikube
+type: Control Plane
+host: Stopped
+kubelet: Stopped
+apiserver: Stopped
+kubeconfig: Stopped
+
+
+C:\Users\Hp>
